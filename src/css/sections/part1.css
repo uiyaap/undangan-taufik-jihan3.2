@@ -195,7 +195,15 @@
 }
 
 .couple__illustration-wrapper {
-  width: 100%;
-  max-width: 260px;
-  color: var(--color-accent);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.couple-illustration-img {
+  max-width: 100%;
+  height: auto;
+  max-height: 220px; /* Adjust sesuai keinginan */
+  object-fit: contain;
 }
