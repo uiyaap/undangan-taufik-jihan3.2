@@ -1,0 +1,156 @@
+/* Component: Navigation Header Bar */
+.nav-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
+  background: rgba(8, 31, 29, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-border-gold-trans);
+  z-index: var(--z-navbar);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-24);
+}
+
+.nav-links {
+  display: flex;
+  gap: var(--space-20, 20px);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-body);
+}
+
+.nav-link.active {
+  color: var(--color-accent);
+  border-bottom: 2px solid var(--color-accent);
+}
+
+.music-toggle-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-circle, 50%);
+  border: 1px solid var(--color-border-gold);
+  color: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(212, 175, 55, 0.1);
+}
+
+/* Component: Double Bordered Luxury Card */
+.card-luxury {
+  position: relative;
+  background: linear-gradient(180deg, rgba(14, 59, 55, 0.85) 0%, rgba(8, 31, 29, 0.95) 100%);
+  border: 1px solid var(--color-border-gold);
+  border-radius: var(--radius-md);
+  padding: var(--space-32) var(--space-24);
+  box-shadow: var(--shadow-medium);
+  margin-bottom: var(--space-32);
+}
+
+.card-luxury::before {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border: 1px solid var(--color-border-gold-trans);
+  border-radius: calc(var(--radius-md) - 4px);
+  pointer-events: none;
+}
+
+.card-luxury--maroon {
+  background: linear-gradient(180deg, rgba(91, 31, 42, 0.9) 0%, rgba(45, 12, 18, 0.95) 100%);
+}
+
+/* Corner Ornaments Helper Inside Card */
+.card-corner {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  color: var(--color-accent);
+  pointer-events: none;
+}
+
+.card-corner--tl { top: 6px; left: 6px; }
+.card-corner--tr { top: 6px; right: 6px; transform: scaleX(-1); }
+.card-corner--bl { bottom: 6px; left: 6px; transform: scaleY(-1); }
+.card-corner--br { bottom: 6px; right: 6px; transform: scale(-1); }
+
+/* Component: Gold & Maroon Pill Button */
+.btn-primary-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #E6C75A 0%, #D4AF37 100%);
+  color: #081F1D;
+  font-weight: 600;
+  font-size: var(--fs-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 12px 32px;
+  border-radius: var(--radius-pill);
+  border: 1px solid #FFF5DD;
+  box-shadow: var(--glow-gold);
+  transition: all 0.3s ease;
+}
+
+.btn-primary-gold:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+.btn-maroon-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #7A2838 0%, #5B1F2A 100%);
+  color: var(--color-accent);
+  font-weight: 500;
+  font-size: var(--fs-sm);
+  letter-spacing: 0.05em;
+  padding: 10px 28px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border-gold);
+}
+
+/* Component: Vintage Countdown Box */
+.countdown-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-12, 12px);
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.countdown-box {
+  position: relative;
+  background: rgba(8, 31, 29, 0.8);
+  border: 1px solid var(--color-border-gold);
+  border-radius: var(--radius-sm);
+  padding: var(--space-12) 0;
+  text-align: center;
+}
+
+.countdown-box::after {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  border: 1px stroke var(--color-border-gold-trans);
+}
+
+.countdown-value {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h1);
+  color: var(--color-text-heading);
+  line-height: 1.1;
+}
+
+.countdown-label {
+  font-size: var(--fs-xs);
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}

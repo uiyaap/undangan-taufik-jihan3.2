@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <!-- Mosque Icon (Akad) -->
+  <symbol id="icon-mosque" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 32 8 C 24 16, 24 24, 32 28 C 40 24, 40 16, 32 8 Z" fill="currentColor" opacity="0.2"/>
+    <path d="M 32 4 L 32 8 M 30 6 L 34 6"/>
+    <path d="M 16 32 L 48 32 L 48 56 L 16 56 Z"/>
+    <path d="M 26 56 L 26 42 C 26 38, 38 38, 38 42 L 38 56"/>
+    <path d="M 8 28 L 16 28 L 16 56 L 8 56 Z M 48 28 L 56 28 L 56 56 L 48 56 Z"/>
+    <path d="M 8 28 C 8 22, 12 20, 12 16 M 56 28 C 56 22, 52 20, 52 16"/>
+  </symbol>
+
+  <!-- Rumah Gadang Icon (Resepsi) -->
+  <symbol id="icon-rumah-gadang-mini" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 8 28 C 18 24, 24 12, 26 8 C 28 16, 30 22, 32 24 C 34 22, 36 16, 38 8 C 40 12, 46 24, 56 28" stroke-width="2"/>
+    <path d="M 12 28 L 52 28 L 48 52 L 16 52 Z"/>
+    <path d="M 28 52 L 28 40 L 36 40 L 36 52"/>
+    <path d="M 18 34 L 22 34 M 42 34 L 46 34"/>
+  </symbol>
+</svg>

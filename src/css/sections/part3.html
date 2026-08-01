@@ -1,0 +1,101 @@
+<!-- SECTION 10 & 11: RSVP & WISHES SECTION -->
+<section id="rsvp" class="section-rsvp">
+  <div class="container container--narrow">
+    <div class="rsvp__card card-luxury card-luxury--maroon">
+      <!-- Corner Ornaments -->
+      <div class="card-corner card-corner--tl"></div>
+      <div class="card-corner card-corner--tr"></div>
+      <div class="card-corner card-corner--bl"></div>
+      <div class="card-corner card-corner--br"></div>
+
+      <div class="section-title-wrapper">
+        <h2 class="section-title">RSVP</h2>
+        <p class="rsvp__subtitle">Mohon konfirmasi kehadiran Anda</p>
+      </div>
+
+      <!-- Form RSVP -->
+      <form id="form-rsvp" class="rsvp__form">
+        <div class="form-group">
+          <div class="input-wrapper">
+            <svg class="input-icon"><use href="#icon-user"></use></svg>
+            <input type="text" id="rsvp-name" name="name" class="form-input" placeholder="Nama Lengkap" required />
+          </div>
+        </div>
+
+        <div class="form-group form-group--grid">
+          <div class="input-wrapper">
+            <svg class="input-icon"><use href="#icon-users"></use></svg>
+            <select id="rsvp-pax" name="pax" class="form-select" required>
+              <option value="" disabled selected>Jumlah Hadir</option>
+              <option value="1">1 Orang</option>
+              <option value="2">2 Orang</option>
+            </select>
+          </div>
+
+          <div class="input-wrapper">
+            <select id="rsvp-attendance" name="attendance" class="form-select" required>
+              <option value="" disabled selected>Konfirmasi</option>
+              <option value="HADIR">Hadir</option>
+              <option value="TIDAK_HADIR">Tidak Hadir</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="input-wrapper input-wrapper--textarea">
+            <svg class="input-icon"><use href="#icon-message"></use></svg>
+            <textarea id="rsvp-message" name="message" class="form-textarea" placeholder="Ucapan & Doa (Opsional)" rows="3"></textarea>
+          </div>
+        </div>
+
+        <button type="submit" id="btn-submit-rsvp" class="btn-primary-gold btn-full">
+          KONFIRMASI KEHADIRAN
+        </button>
+      </form>
+    </div>
+
+    <!-- Live Wishes Feed / Stream -->
+    <div id="wishes" class="wishes__container">
+      <h3 class="wishes__title">DOA & UCAPAN</h3>
+      <div id="wishes-list" class="wishes__list">
+        <!-- Feed ucapan akan terisi secara dinamis dari API Backend -->
+        <div class="wish-item">
+          <p class="wish-author">Ahmad & Keluarga</p>
+          <p class="wish-text">Selamat untuk Taufik & Jihan! Semoga menjadi keluarga yang sakinah, mawaddah, warahmah. Aamiin.</p>
+          <span class="wish-time">Baru saja</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 12 & 13: CLOSING & FOOTER SECTION -->
+<footer id="footer" class="section-footer">
+  <div class="footer__sky"></div>
+  <div class="footer__rumah-gadang"></div>
+  <div class="footer__fog"></div>
+  <div class="footer__overlay"></div>
+
+  <div class="container footer__content">
+    <p class="footer__thankyou">
+      Merupakan suatu kehormatan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir memberikan doa restu.
+    </p>
+
+    <h2 class="footer__couple-names">Taufik & Jihan</h2>
+
+    <div class="divider-wrapper">
+      <svg class="ornament-divider" viewBox="0 0 400 40" width="160" height="20">
+        <use href="#ornament-divider-svg"></use>
+      </svg>
+    </div>
+
+    <p class="footer__copyright">
+      © 2026 The Wedding of Taufik & Jihan. All Rights Reserved.
+    </p>
+  </div>
+</footer>
+
+<!-- Global Audio Tag (Hidden) -->
+<audio id="bg-music" loop preload="auto">
+  <source src="/assets/audio/background.mp3" type="audio/mpeg" />
+</audio>
