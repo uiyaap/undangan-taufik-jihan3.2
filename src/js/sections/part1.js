@@ -1,5 +1,3 @@
-import { gsap } from 'gsap';
-
 export function initPart1Animations() {
   // Parsing Query Parameter URL untuk Nama Tamu Undangan
   const urlParams = new URLSearchParams(window.location.search);
