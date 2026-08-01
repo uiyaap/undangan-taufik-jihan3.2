@@ -11,28 +11,373 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
-  <!-- Base Stylesheets -->
-  <link rel="stylesheet" href="/src/css/base/variables.css" />
-  <link rel="stylesheet" href="/src/css/base/reset.css" />
-  <link rel="stylesheet" href="/src/css/components/ornaments.css" />
-  <link rel="stylesheet" href="/src/css/components/cards.css" />
-  <link rel="stylesheet" href="/src/css/sections/part1.css" />
-  <link rel="stylesheet" href="/src/css/sections/part2.css" />
-  <link rel="stylesheet" href="/src/css/sections/part3.css" />
+  <!-- Base & Component Stylesheets -->
+  <link rel="stylesheet" href="./src/css/base/variables.css" />
+  <link rel="stylesheet" href="./src/css/base/reset.css" />
+  <link rel="stylesheet" href="./src/css/components/ornaments.css" />
+  <link rel="stylesheet" href="./src/css/components/cards.css" />
+
+  <!-- Section Stylesheets -->
+  <link rel="stylesheet" href="./src/css/sections/part1.css" />
+  <link rel="stylesheet" href="./src/css/sections/part2.css" />
+  <link rel="stylesheet" href="./src/css/sections/part3.css" />
 </head>
 <body>
 
-  <!-- SVG Sprite Definitions (Hidden) -->
-  <div id="svg-sprites" style="display: none;">
-    <!-- Memuat Monogram, Emblem Crest, Corner, Divider, dan Set Ikon dari Tahap 2 & Revised -->
-  </div>
+  <!-- SVG SPRITE DEFINITIONS (HIDDEN GUDANG SVG) -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <!-- Monogram SVG -->
+    <symbol id="monogram-svg" viewBox="0 0 200 200">
+      <circle cx="100" cy="100" r="94" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 2" opacity="0.6"/>
+      <circle cx="100" cy="100" r="88" stroke="currentColor" stroke-width="1"/>
+      <path d="M100 4 L104 12 L100 20 L96 12 Z" fill="currentColor"/>
+      <path d="M100 180 L104 188 L100 196 L96 188 Z" fill="currentColor"/>
+      <path d="M4 100 L12 104 L20 100 L12 96 Z" fill="currentColor"/>
+      <path d="M180 100 L188 104 L196 100 L188 96 Z" fill="currentColor"/>
+      <g fill="currentColor" style="font-family: 'Cormorant Garamond', serif; font-weight: 600;">
+        <text x="75" y="115" font-size="54" text-anchor="middle">T</text>
+        <path d="M92 110 C95 100, 105 100, 108 110" stroke="currentColor" stroke-width="2" fill="none"/>
+        <text x="125" y="118" font-size="54" text-anchor="middle">J</text>
+      </g>
+    </symbol>
 
-  <!-- App Sections -->
-  <!-- Include: Navbar, Hero, Opening, Couple (Part 1) -->
-  <!-- Include: Event, Countdown, Location Maps, Gift (Part 2) -->
-  <!-- Include: RSVP Form, Wishes Stream, Footer, Audio (Part 3) -->
+    <!-- Emblem Crest SVG -->
+    <symbol id="emblem-crest-svg" viewBox="0 0 160 80">
+      <path d="M80 5 L88 25 L84 25 L92 45 L85 45 L95 65 L65 65 L75 45 L68 45 L76 25 L72 25 Z" fill="currentColor"/>
+      <path d="M80 65 C50 65, 30 45, 10 50 C 25 35, 45 40, 65 52" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+      <path d="M80 65 C110 65, 130 45, 150 50 C 135 35, 115 40, 95 52" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+      <circle cx="80" cy="72" r="2.5" fill="currentColor"/>
+    </symbol>
+
+    <!-- Ornament Divider SVG -->
+    <symbol id="ornament-divider-svg" viewBox="0 0 400 40">
+      <path d="M 185 24 C 190 18, 195 10, 196 6 C 197 14, 198 18, 200 22 C 202 18, 203 14, 204 6 C 205 10, 210 18, 215 24 Z" fill="currentColor"/>
+      <path d="M 180 26 L 220 26 L 200 32 Z" fill="currentColor"/>
+      <path d="M 175 22 C 150 22, 140 10, 110 10 C 80 10, 60 25, 30 25 L 0 25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+      <path d="M 225 22 C 250 22, 260 10, 290 10 C 320 10, 340 25, 370 25 L 400 25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+    </symbol>
+
+    <!-- Couple Illustration SVG -->
+    <symbol id="couple-illustration-svg" viewBox="0 0 300 200">
+      <g stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <path d="M 70 60 C 60 50, 55 30, 85 20 C 115 30, 110 50, 100 60 Z"/>
+        <path d="M 60 50 L 110 50 M 75 35 L 95 35"/>
+        <path d="M 72 60 C 72 75, 98 75, 98 60"/>
+        <path d="M 65 80 L 45 140 L 90 140 L 90 90"/>
+        <path d="M 200 20 L 230 20 M 195 28 L 235 28 M 190 36 L 240 36"/>
+        <path d="M 215 10 L 215 50"/>
+        <path d="M 202 50 C 202 65, 228 65, 228 50"/>
+        <path d="M 195 70 L 175 140 L 220 140"/>
+        <circle cx="150" cy="82" r="4" fill="currentColor"/>
+      </g>
+    </symbol>
+
+    <!-- Event Icons SVG -->
+    <symbol id="icon-mosque" viewBox="0 0 64 64">
+      <path d="M 32 8 C 24 16, 24 24, 32 28 C 40 24, 40 16, 32 8 Z" fill="currentColor" opacity="0.2"/>
+      <path d="M 16 32 L 48 32 L 48 56 L 16 56 Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+      <path d="M 26 56 L 26 42 C 26 38, 38 38, 38 42 L 38 56" stroke="currentColor" stroke-width="1.5" fill="none"/>
+      <path d="M 8 28 L 16 28 L 16 56 L 8 56 Z M 48 28 L 56 28 L 56 56 L 48 56 Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+    </symbol>
+
+    <symbol id="icon-rumah-gadang-mini" viewBox="0 0 64 64">
+      <path d="M 8 28 C 18 24, 24 12, 26 8 C 28 16, 30 22, 32 24 C 34 22, 36 16, 38 8 C 40 12, 46 24, 56 28" stroke="currentColor" stroke-width="2" fill="none"/>
+      <path d="M 12 28 L 52 28 L 48 52 L 16 52 Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+      <path d="M 28 52 L 28 40 L 36 40 L 36 52" stroke="currentColor" stroke-width="1.5" fill="none"/>
+    </symbol>
+
+    <!-- General UI Icons -->
+    <symbol id="icon-calendar" viewBox="0 0 24 24"><path d="M19 4H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="2" fill="none"/></symbol>
+    <symbol id="icon-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="12 6 12 12 16 14" stroke="currentColor" stroke-width="2" fill="none"/></symbol>
+    <symbol id="icon-location" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2" fill="none"/></symbol>
+    <symbol id="icon-music" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="6" cy="18" r="3" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="18" cy="16" r="3" stroke="currentColor" stroke-width="2" fill="none"/></symbol>
+    <symbol id="icon-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" stroke="currentColor" stroke-width="2" fill="none"/></symbol>
+    <symbol id="icon-user" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2" fill="none"/></symbol>
+    <symbol id="icon-users" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-3-3.87" stroke="currentColor" stroke-width="2" fill="none"/><path d="M9 21v-2a4 4 0 0 1 4-4h1" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2" fill="none"/></symbol>
+    <symbol id="icon-message" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="currentColor" stroke-width="2" fill="none"/></symbol>
+  </svg>
+
+  <!-- NAVBAR HEADER -->
+  <header class="nav-header">
+    <div class="nav-brand">
+      <svg class="nav-monogram-mini" viewBox="0 0 200 200" width="28" height="28">
+        <use href="#monogram-svg"></use>
+      </svg>
+    </div>
+    <nav class="nav-links">
+      <a href="#hero" class="nav-link active">BERANDA</a>
+      <a href="#opening" class="nav-link">PEMBUKA</a>
+      <a href="#couple" class="nav-link">MEMPELAI</a>
+      <a href="#event" class="nav-link">ACARA</a>
+      <a href="#location" class="nav-link">LOKASI</a>
+      <a href="#rsvp" class="nav-link">RSVP</a>
+    </nav>
+    <button id="music-toggle" class="music-toggle-btn" aria-label="Toggle Music">
+      <svg class="ui-icon"><use href="#icon-music"></use></svg>
+    </button>
+  </header>
+
+  <!-- SECTION 01: HERO SECTION -->
+  <section id="hero" class="section-hero">
+    <div class="hero__sky"></div>
+    <div class="hero__stars"></div>
+    <div class="hero__moon"></div>
+    <div class="hero__back-light"></div>
+    <div class="hero__rumah-gadang"></div>
+    <div class="hero__fog-back"></div>
+    <div class="hero__fog-front"></div>
+    <div class="hero__gold-dust"></div>
+    <div class="hero__overlay"></div>
+
+    <div class="hero__content">
+      <div class="hero__crest">
+        <svg class="emblem-crest" viewBox="0 0 160 80" width="120" height="60">
+          <use href="#emblem-crest-svg"></use>
+        </svg>
+      </div>
+      <p class="hero__subtitle">THE WEDDING OF</p>
+      <h1 class="hero__title">
+        <span class="hero__title-name">TAUFIK</span>
+        <span class="hero__title-ampersand">&</span>
+        <span class="hero__title-name">JIHAN</span>
+      </h1>
+      <div class="hero__date-badge">
+        <span>29</span><span class="bullet">•</span><span>08</span><span class="bullet">•</span><span>2026</span>
+      </div>
+      <div class="hero__guest-box">
+        <p class="guest-label">Kepada Yth.</p>
+        <p id="guest-name" class="guest-name">Bapak/Ibu/Saudara/i</p>
+      </div>
+      <button id="btn-open-invitation" class="btn-primary-gold hero__cta">BUKA UNDANGAN</button>
+    </div>
+  </section>
+
+  <!-- SECTION 02: OPENING SECTION -->
+  <section id="opening" class="section-opening">
+    <div class="container container--narrow">
+      <div class="opening__card card-luxury">
+        <div class="opening__arabic">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+        <h2 class="opening__salam">Assalamu’alaikum Warahmatullahi Wabarakatuh</h2>
+        <div class="divider-wrapper">
+          <svg class="ornament-divider" viewBox="0 0 400 40" width="200" height="20">
+            <use href="#ornament-divider-svg"></use>
+          </svg>
+        </div>
+        <p class="opening__text">
+          Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan.
+          Dengan memohon Ridho dan Rahmat-Nya, kami bermaksud menyelenggarakan pernikahan putra-putri kami.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 03: COUPLE SECTION -->
+  <section id="couple" class="section-couple">
+    <div class="container">
+      <div class="couple__card card-luxury card-luxury--maroon">
+        <div class="couple__grid">
+          <div class="couple__profile couple__profile--groom">
+            <h3 class="couple__name">Muhammad<br>Taufik Ardi, S.Hum</h3>
+            <div class="couple__parents">
+              <p class="parents-label">Putra dari</p>
+              <p class="parents-names">Bapak Ardi, S.E. & Ibu Fitria, S.Pd</p>
+            </div>
+          </div>
+          <div class="couple__illustration-wrapper">
+            <svg class="couple-illustration" viewBox="0 0 300 200" width="100%" height="auto">
+              <use href="#couple-illustration-svg"></use>
+            </svg>
+          </div>
+          <div class="couple__profile couple__profile--bride">
+            <h3 class="couple__name">Jihan<br>Salsabila, S.Hum</h3>
+            <div class="couple__parents">
+              <p class="parents-label">Putri dari</p>
+              <p class="parents-names">Bapak Syafril, S.T. & Ibu Yulia, S.Pd</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 04: EVENT SECTION -->
+  <section id="event" class="section-event">
+    <div class="container">
+      <div class="section-title-wrapper">
+        <h2 class="section-title">ACARA</h2>
+        <div class="divider-wrapper">
+          <svg class="ornament-divider" viewBox="0 0 400 40" width="200" height="20">
+            <use href="#ornament-divider-svg"></use>
+          </svg>
+        </div>
+      </div>
+      <div class="event__grid">
+        <div class="event__card card-luxury">
+          <div class="event__icon-header">
+            <svg class="event-svg-icon" viewBox="0 0 64 64" width="48" height="48"><use href="#icon-mosque"></use></svg>
+          </div>
+          <h3 class="event__name">AKAD NIKAH</h3>
+          <div class="event__details">
+            <div class="event__item"><svg class="ui-icon"><use href="#icon-calendar"></use></svg><span>Sabtu, 29 Agustus 2026</span></div>
+            <div class="event__item"><svg class="ui-icon"><use href="#icon-clock"></use></svg><span>08.00 WIB</span></div>
+            <div class="event__item event__item--top"><svg class="ui-icon"><use href="#icon-location"></use></svg><div class="event__location-text"><strong>Masjid Raya Sumatera Barat</strong><p>Jl. Khatib Sulaiman No. 1, Padang</p></div></div>
+          </div>
+        </div>
+        <div class="event__card card-luxury">
+          <div class="event__icon-header">
+            <svg class="event-svg-icon" viewBox="0 0 64 64" width="48" height="48"><use href="#icon-rumah-gadang-mini"></use></svg>
+          </div>
+          <h3 class="event__name">RESEPSI</h3>
+          <div class="event__details">
+            <div class="event__item"><svg class="ui-icon"><use href="#icon-calendar"></use></svg><span>Sabtu, 29 Agustus 2026</span></div>
+            <div class="event__item"><svg class="ui-icon"><use href="#icon-clock"></use></svg><span>11.00 - 14.00 WIB</span></div>
+            <div class="event__item event__item--top"><svg class="ui-icon"><use href="#icon-location"></use></svg><div class="event__location-text"><strong>ZHM Premiere Hotel Padang</strong><p>Jl. M. Thamrin No. 27, Padang</p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 05: COUNTDOWN SECTION -->
+  <section id="countdown" class="section-countdown">
+    <div class="container">
+      <div class="countdown__card card-luxury card-luxury--maroon">
+        <h3 class="countdown__title">COUNTDOWN</h3>
+        <p class="countdown__subtitle">Menuju Hari Bahagia</p>
+        <div class="countdown-grid">
+          <div class="countdown-box"><div id="cd-days" class="countdown-value">00</div><div class="countdown-label">HARI</div></div>
+          <div class="countdown-box"><div id="cd-hours" class="countdown-value">00</div><div class="countdown-label">JAM</div></div>
+          <div class="countdown-box"><div id="cd-minutes" class="countdown-value">00</div><div class="countdown-label">MENIT</div></div>
+          <div class="countdown-box"><div id="cd-seconds" class="countdown-value">00</div><div class="countdown-label">DETIK</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 06 & 07: LOCATION MAPS -->
+  <section id="location" class="section-location">
+    <div class="container">
+      <div class="section-title-wrapper">
+        <h2 class="section-title">LOKASI</h2>
+        <div class="divider-wrapper"><svg class="ornament-divider" viewBox="0 0 400 40" width="200" height="20"><use href="#ornament-divider-svg"></use></svg></div>
+      </div>
+      <div class="location__wrapper card-luxury">
+        <p class="location__text-center">Masjid Raya Sumatera Barat & ZHM Premiere Hotel Padang</p>
+        <div class="location__map-container">
+          <iframe title="Google Maps Location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.310165561085!2d100.3601725!3d-0.925206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2fd4b92b67d5e49b%3A0xb3bd6a8b7e0a811d!2sMasjid%20Raya%20Sumatera%20Barat!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" width="100%" height="280" style="border:0; filter: sepia(30%) hue-rotate(120deg) contrast(110%);" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="location__action">
+          <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn-maroon-pill">LIHAT DI GOOGLE MAPS 📍</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 08 & 09: GIFT SECTION -->
+  <section id="gift" class="section-gift">
+    <div class="container container--narrow">
+      <div class="section-title-wrapper">
+        <h2 class="section-title">WEDDING GIFT</h2>
+        <div class="divider-wrapper"><svg class="ornament-divider" viewBox="0 0 400 40" width="200" height="20"><use href="#ornament-divider-svg"></use></svg></div>
+      </div>
+      <div class="gift__card card-luxury">
+        <p class="gift__description">Doa Restu Anda merupakan karunia yang sangat berarti bagi kami. Namun jika Anda ingin memberi hadiah, kami menyediakan Amplop Digital di bawah ini:</p>
+        <div class="gift__bank-box">
+          <div class="bank-name">BANK MANDIRI</div>
+          <div class="account-number">1110022334455</div>
+          <div class="account-holder">a.n. Muhammad Taufik Ardi</div>
+          <button class="btn-copy" data-copy="1110022334455"><svg class="ui-icon"><use href="#icon-copy"></use></svg> SALIN NO. REKENING</button>
+        </div>
+        <div class="gift__bank-box">
+          <div class="bank-name">BANK BCA</div>
+          <div class="account-number">8889990011</div>
+          <div class="account-holder">a.n. Jihan Salsabila</div>
+          <button class="btn-copy" data-copy="8889990011"><svg class="ui-icon"><use href="#icon-copy"></use></svg> SALIN NO. REKENING</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 10 & 11: RSVP & WISHES SECTION -->
+  <section id="rsvp" class="section-rsvp">
+    <div class="container container--narrow">
+      <div class="rsvp__card card-luxury card-luxury--maroon">
+        <div class="section-title-wrapper">
+          <h2 class="section-title">RSVP</h2>
+          <p class="rsvp__subtitle">Mohon konfirmasi kehadiran Anda</p>
+        </div>
+        <form id="form-rsvp" class="rsvp__form">
+          <div class="form-group">
+            <div class="input-wrapper">
+              <svg class="input-icon"><use href="#icon-user"></use></svg>
+              <input type="text" id="rsvp-name" name="name" class="form-input" placeholder="Nama Lengkap" required />
+            </div>
+          </div>
+          <div class="form-group form-group--grid">
+            <div class="input-wrapper">
+              <svg class="input-icon"><use href="#icon-users"></use></svg>
+              <select id="rsvp-pax" name="pax" class="form-select" required>
+                <option value="" disabled selected>Jumlah Hadir</option>
+                <option value="1">1 Orang</option>
+                <option value="2">2 Orang</option>
+              </select>
+            </div>
+            <div class="input-wrapper">
+              <select id="rsvp-attendance" name="attendance" class="form-select" required>
+                <option value="" disabled selected>Konfirmasi</option>
+                <option value="HADIR">Hadir</option>
+                <option value="TIDAK_HADIR">Tidak Hadir</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-wrapper input-wrapper--textarea">
+              <svg class="input-icon"><use href="#icon-message"></use></svg>
+              <textarea id="rsvp-message" name="message" class="form-textarea" placeholder="Ucapan & Doa (Opsional)" rows="3"></textarea>
+            </div>
+          </div>
+          <button type="submit" id="btn-submit-rsvp" class="btn-primary-gold btn-full">KONFIRMASI KEHADIRAN</button>
+        </form>
+      </div>
+
+      <div id="wishes" class="wishes__container">
+        <h3 class="wishes__title">DOA & UCAPAN</h3>
+        <div id="wishes-list" class="wishes__list">
+          <div class="wish-item">
+            <p class="wish-author">Ahmad & Keluarga</p>
+            <p class="wish-text">Selamat untuk Taufik & Jihan! Semoga menjadi keluarga yang sakinah, mawaddah, warahmah. Aamiin.</p>
+            <span class="wish-time">Baru saja</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 12 & 13: CLOSING & FOOTER SECTION -->
+  <footer id="footer" class="section-footer">
+    <div class="footer__sky"></div>
+    <div class="footer__rumah-gadang"></div>
+    <div class="footer__fog"></div>
+    <div class="footer__overlay"></div>
+
+    <div class="container footer__content">
+      <p class="footer__thankyou">
+        Merupakan suatu kehormatan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir memberikan doa restu.
+      </p>
+      <h2 class="footer__couple-names">Taufik & Jihan</h2>
+      <div class="divider-wrapper">
+        <svg class="ornament-divider" viewBox="0 0 400 40" width="160" height="20"><use href="#ornament-divider-svg"></use></svg>
+      </div>
+      <p class="footer__copyright">© 2026 The Wedding of Taufik & Jihan. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Global Audio Tag (Hidden) -->
+  <audio id="bg-music" loop preload="auto">
+    <source src="./assets/audio/background.mp3" type="audio/mpeg" />
+  </audio>
 
   <!-- Application Main Script -->
-  <script type="module" src="/src/js/main.js"></script>
+  <script type="module" src="./src/js/main.js"></script>
 </body>
 </html>
