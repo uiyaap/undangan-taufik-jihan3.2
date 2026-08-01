@@ -4,7 +4,7 @@ import { initPart3Functions } from './sections/part3.js';
 import { initRsvpIntegration } from './sections/rsvpIntegration.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Inisialisasi Lenis Smooth Scroll dari CDN
+  // 1. INISIALISASI SMOOTH SCROLL (LENIS DARI CDN)
   if (typeof Lenis !== 'undefined') {
     const lenis = new Lenis({
       duration: 1.2,
@@ -19,9 +19,13 @@ document.addEventListener('DOMContentLoaded', () => {
     requestAnimationFrame(raf);
   }
 
-  // Inisialisasi Seluruh Fungsi UI & Animasi
-  initPart1Animations();
-  initPart2Functions();
-  initPart3Functions();
-  initRsvpIntegration();
+  // 2. JALANKAN SEMUA FUNGSI MODUL UTAMA
+  try {
+    initPart1Animations();
+    initPart2Functions();
+    initPart3Functions();
+    initRsvpIntegration();
+  } catch (error) {
+    console.warn('[System Warning]: Terjadi kesalahan saat memuat fungsi UI:', error);
+  }
 });
