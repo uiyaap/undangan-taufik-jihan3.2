@@ -4,14 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Wedding of Taufik & Jihan</title>
-  <meta name="description" content="Undangan Pernikahan Digital Taufik & Jihan - The Royal Minangkabau Night" />
+
+  <!-- GSAP & Lenis CDN (Memperbaiki error Uncaught TypeError Lenis) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
 
   <!-- Fonts Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
-  <!-- Base & Component Stylesheets -->
+  <!-- Base & Component Stylesheets (Jalur relatif aman untuk GitHub Pages) -->
   <link rel="stylesheet" href="src/css/base/variables.css" />
   <link rel="stylesheet" href="src/css/base/reset.css" />
   <link rel="stylesheet" href="src/css/components/ornaments.css" />
