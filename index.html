@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
-<!-- Base & Component Stylesheets -->
+  <!-- Base & Component Stylesheets -->
   <link rel="stylesheet" href="src/css/base/variables.css" />
   <link rel="stylesheet" href="src/css/base/reset.css" />
   <link rel="stylesheet" href="src/css/components/ornaments.css" />
@@ -22,12 +22,9 @@
   <link rel="stylesheet" href="src/css/sections/part2.css" />
   <link rel="stylesheet" href="src/css/sections/part3.css" />
 </head>
-
-<!-- Application Main Script -->
-<script type="module" src="src/js/main.js"></script>  
 <body>
 
-  <!-- SVG SPRITE DEFINITIONS (HIDDEN GUDANG SVG) -->
+  <!-- SVG SPRITE DEFINITIONS (GUDANG ICON & ORNAMEN) -->
   <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
     <!-- Monogram SVG -->
     <symbol id="monogram-svg" viewBox="0 0 200 200">
@@ -89,7 +86,7 @@
       <path d="M 28 52 L 28 40 L 36 40 L 36 52" stroke="currentColor" stroke-width="1.5" fill="none"/>
     </symbol>
 
-    <!-- General UI Icons -->
+    <!-- UI Icons -->
     <symbol id="icon-calendar" viewBox="0 0 24 24"><path d="M19 4H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="2" fill="none"/></symbol>
     <symbol id="icon-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="12 6 12 12 16 14" stroke="currentColor" stroke-width="2" fill="none"/></symbol>
     <symbol id="icon-location" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2" fill="none"/></symbol>
@@ -377,10 +374,10 @@
 
   <!-- Global Audio Tag (Hidden) -->
   <audio id="bg-music" loop preload="auto">
-    <source src="./assets/audio/background.mp3" type="audio/mpeg" />
+    <source src="assets/audio/background.mp3" type="audio/mpeg" />
   </audio>
 
-  <!-- Application Main Script -->
-  <script type="module" src="./src/js/main.js"></script>
+  <!-- Application Main Script (Wajib di dalam body sebelum penutup) -->
+  <script type="module" src="src/js/main.js"></script>
 </body>
 </html>
