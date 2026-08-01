@@ -2,6 +2,8 @@ import { defineConfig } from 'vite';
 import { resolve } from 'path';
 
 export default defineConfig({
+  // Sesuaikan nama repository GitHub Pages kamu
+  base: '/undangan-taufik-jihan3.2/', 
   root: './',
   publicDir: 'public',
   build: {
